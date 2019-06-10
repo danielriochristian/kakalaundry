@@ -1,0 +1,35 @@
+customer
+-nama
+-hp
+-alamat
+-berat
+-id_jenispakaian
+-id_pengharum
+-paket
+-total
+-tgl_terima
+-tgl_selesai
+
+pengharum
+-id	
+-namapengharum
+-harga
+1 = wangi				1000
+2 = wangi parah				2000
+3 = wangi gak ilang ilang		3000
+
+jenispakaian
+-id
+-jenispakaian
+-harga
+1 = pakaian biasa (kaos/kemeja/dll)	9000/kg
+2 = gordyn 				18000/kg
+3 = sepatu				10000/kg
+
+users
+
+right panel
+margin-left
+
+aside.left-panel 
+width :17%
