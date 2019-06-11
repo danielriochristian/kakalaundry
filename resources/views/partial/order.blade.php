@@ -1,17 +1,7 @@
 @extends('layout')
-@section('labelorder')
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-    <div class="breadcomb-wp">
-      <div class="breadcomb-icon">
-          <h2>Create Order</h2>
-      </div>
-    </div>
-  </div>
-@endsection
 @section('order')
-<div class="row">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div class="data-table-list">
+<p class="card-title">Recent Purchases</p>
+
       <form action="/postorder" method="post" id="myForm" enctype="multipart/form-data" target="_blank" class="form-horizontal">
         {{ csrf_field() }}
         <div class="row">
@@ -140,18 +130,17 @@
             </div>
           </div>
         </div>
-        <div class="card-footer">
+
           <button type="submit" class="btn btn-primary btn-sm">
             <i class="fa fa-dot-circle-o"></i> Submit
           </button>
           <button type="reset" class="btn btn-danger btn-sm" onclick="myFunction()">
             <i class="fa fa-ban"></i> Reset
           </button>
-        </div>
-    </div>
+
+
     </form>
-  </div>
-</div>
+
 <script>
 function myFunction() {
   document.getElementById("myForm").reset();

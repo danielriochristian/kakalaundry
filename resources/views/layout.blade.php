@@ -1,322 +1,240 @@
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Kaka Laundry | Admin</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon
-		============================================ -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> -->
-    <!-- Google Fonts
-		============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/bootstrap.min.css')}}">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/font-awesome.min.css')}}">
-    <!-- owl.carousel CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{url('css/owl.theme.css')}}">
-    <link rel="stylesheet" href="{{url('css/owl.transitions.css')}}">
-    <!-- meanmenu CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/meanmenu/meanmenu.min.css')}}">
-    <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/animate.css')}}">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/normalize.css')}}">
-    <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
-    <!-- jvectormap CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/jvectormap/jquery-jvectormap-2.0.3.css')}}">
-    <!-- notika icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/notika-custom-icon.css')}}">
-    <!-- wave CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/wave/waves.min.css')}}">
-    <!-- main CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/main.css')}}">
-    <!-- style CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('style.css')}}">
-    <!-- responsive CSS
-		============================================ -->
-    <link rel="stylesheet" href="{{url('css/responsive.css')}}">
-    <!-- modernizr JS
-		============================================ -->
-    <script src="{{url('js/vendor/modernizr-2.8.3.min.js')}}"></script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Kaka Laundy | Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{{url('admin/vendors/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="stylesheet" href="{{url('admin/vendors/base/vendor.bundle.base.css')}}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{{url('admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{url('admin/css/style.css')}}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{{url('admin/images/favicon.png')}}" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
-    <!-- tambahan -->
-    <!-- <script src="{{url('js/vendor/jquery-1.12.4.min.js')}}"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-
-
+      <script src="{{url('admin/vendors/base/vendor.bundle.base.js')}}"></script>
+  <script src="{{url('admin/js/jquery.dataTables.js')}}"></script>
+  <script src="{{url('admin/js/dataTables.bootstrap4.js')}}"></script>
+  <script src="{{url('admin/vendors/datatables.net/jquery.dataTables.js')}}"></script>
+    <script src="{{url('admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js')}}"></script>
+      <script src="{{url('admin/js/data-table.js')}}"></script>
+    <!-- <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> -->
 
 </head>
-
 <body>
-  <div class="img-fluid" style="background-image: url('https://www.refreshrenovations.global/images/uploads/body-laundry-tub.jpg');background-size: cover; background-repeat:no-repeat;max-height:400px;">
-<div class="top-content">
-  <nav class="navbar navbar-inverse" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- <a class="navbar-brand"> <img src="{{asset('img/logo-white.png')}}" class="img-logo"/></a> -->
-
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="navbar-brand-wrapper d-flex justify-content-center">
+        <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
+          <a class="navbar-brand brand-logo" href="#"><span> Kaka Laundry </span></a>
+          <a class="navbar-brand brand-logo-mini" href="#"><span> Kaka Laundry </span></a>
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-sort-variant"></span>
+          </button>
+        </div>
       </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="top-navbar-1">
-        <ul class="nav navbar-nav navbar-right" style="font-size:9pt;">
-          <li><a href="order"> Order</a>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+
+        <ul class="navbar-nav navbar-nav-right">
+
+
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+
+              <span class="nav-profile-name">{{Auth::User()->name}}</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="mdi mdi-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="mdi mdi-logout text-primary"></i>
+                Logout
+              </a>
+            </div>
           </li>
-          <li><a href="invoice"> Invoice</a>
-          </li>
-          <li><a href="admin"> Admin</a>
-          </li>
-          <li class="dropdown tes">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color: inherit;">{{Auth::User()->name}} <span class="caret"></span></a>
-            <ul class="dropdown-menu" style="background-color: inherit;">
-            <li><a href="logout" stlye="color:#000000;">Logout</a></li>
         </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
       </div>
-    </div>
-    </div>
-  </nav>
-  <div class="top-content-container">
-  <div class="container">
-<div class="row">
-  <div class="col-sm-12 text wow fadeInLeft">
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="mdi mdi-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li> -->
 
-    <h1 style="color:rgb(250, 148, 74);white;font-size:24pt;font-style:'lyon_display';text-align: center;text-shadow: #fff 5px 0 10px;">Kaka Laundry</h1>
-    <div class="description">
-      <p class="small-paragraph" style="color:white;font-size:10pt;text-align: center;text-shadow: #000 5px 0 10px;">
-      Anda Puas Kami Senang
-      </p>
+          <li class="nav-item">
+            <a class="nav-link" href="order">
+              <i class="mdi mdi-view-headline menu-icon"></i>
+              <span class="menu-title">Order</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="invoice">
+              <i class="mdi mdi-chart-pie menu-icon"></i>
+              <span class="menu-title">Invoice</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="manageadmin">
+              <i class="mdi mdi-grid-large menu-icon"></i>
+              <span class="menu-title">Admin</span>
+            </a>
+          </li>
 
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-    <!-- <div class="header-top-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="logo-area">
-                        <a href="#"><img src="img/logo/logo.png" alt="" /></a>
-                    </div>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="d-flex justify-content-between flex-wrap">
+                <div class="d-flex align-items-end flex-wrap">
+                  <div class="mr-md-3 mr-xl-5">
+                    <h2>Welcome back</h2>
+
+                  </div>
+
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="header-top-menu">
-                        <ul class="nav navbar-nav notika-top-nav">
-                            <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-chat"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd chat-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Chat</h2>
-                                    </div>
-                                    <div class="search-people">
-                                        <i class="notika-icon notika-left-arrow"></i>
-                                        <input type="text" placeholder="Search People" />
-                                    </div>
-                                    <div class="hd-message-info">
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Jonathan Morris</h3>
-                                                    <p>Last seen 3 hours ago</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/4.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Fredric Mitchell</h3>
-                                                    <p>Last seen 2 minutes ago</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Glenn Jecobs</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                  <button type="button" class="btn btn-light bg-white btn-icon mr-3 d-none d-md-block ">
+                    <i class="mdi mdi-download text-muted"></i>
+                  </button>
+                  <button type="button" class="btn btn-light bg-white btn-icon mr-3 mt-2 mt-xl-0">
+                    <i class="mdi mdi-clock-outline text-muted"></i>
+                  </button>
+                  <button type="button" class="btn btn-light bg-white btn-icon mr-3 mt-2 mt-xl-0">
+                    <i class="mdi mdi-plus text-muted"></i>
+                  </button>
+                  <button class="btn btn-primary mt-2 mt-xl-0">Generate report</button>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="row" id="proBanner">
+            <div class="col-md-12 grid-margin">
+              <div class="card bg-gradient-primary border-0">
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body dashboard-tabs p-0">
+                  <ul class="nav nav-tabs px-4" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                    </li>
+
+                  </ul>
+                  <div class="tab-content py-0 px-0">
+                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                      <div class="d-flex flex-wrap justify-content-xl-between">
+
+                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Revenue</small>
+                            <h5 class="mr-2 mb-0">$577545</h5>
+                          </div>
+                        </div>
+                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Total views</small>
+                            <h5 class="mr-2 mb-0">9833550</h5>
+                          </div>
+                        </div>
+                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-download mr-3 icon-lg text-warning"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Downloads</small>
+                            <h5 class="mr-2 mb-0">2233783</h5>
+                          </div>
+                        </div>
+                        <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                          <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-muted">Flagged</small>
+                            <h5 class="mr-2 mb-0">3497843</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <!-- <p class="card-title">Recent Purchases</p> -->
+                  @yield('admin')
+                  @yield('order')
+                  @yield('invoice')
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div> -->
-
-
-    <!-- Mobile Menu end -->
-    <!-- Main Menu area start-->
-
-    <div class="breadcomb-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-            @yield('labelinvoice')
-            @yield('labeladmin')
-            @yield('labelorder')
-
-        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
       </div>
+      <!-- main-panel ends -->
     </div>
+    <!-- page-body-wrapper ends -->
   </div>
+  <!-- container-scroller -->
 
-  <div class="data-table-area">
-    <div class="container">
-      @yield('invoice')
-      @yield('admin')
-      @yield('order')
-    </div>
-  </div>
+  <!-- plugins:js -->
+  <!-- <script src="{{url('admin/vendors/base/vendor.bundle.base.js')}}"></script> -->
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{{url('admin/vendors/chart.js/Chart.min.js')}}"></script>
 
-    <div class="footer-copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright © 2019. Makasih Mas</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Footer area-->
-    <!-- jquery
-		============================================ -->
-    <!-- <script src="{{url('js/vendor/jquery-1.12.4.min.js')}}"></script> -->
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="{{url('js/bootstrap.min.js')}}"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="{{url('js/wow.min.js')}}"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="{{url('js/jquery-price-slider.js')}}"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="{{url('js/owl.carousel.min.js')}}"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="{{url('js/jquery.scrollUp.min.js')}}"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="{{url('js/meanmenu/jquery.meanmenu.js')}}"></script>
-    <!-- counterup JS
-		============================================ -->
-    <script src="{{url('js/counterup/jquery.counterup.min.js')}}"></script>
-    <script src="{{url('js/counterup/waypoints.min.js')}}"></script>
-    <script src="{{url('js/counterup/counterup-active.js')}}"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="{{url('js/scrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-    <!-- jvectormap JS
-		============================================ -->
-    <script src="{{url('js/jvectormap/jquery-jvectormap-2.0.2.min.js')}}"></script>
-    <script src="{{url('js/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
-    <script src="{{url('js/jvectormap/jvectormap-active.js')}}"></script>
-    <!-- sparkline JS
-		============================================ -->
-    <script src="{{url('js/sparkline/jquery.sparkline.min.js')}}"></script>
-    <script src="{{url('js/sparkline/sparkline-active.js')}}"></script>
-    <!-- sparkline JS
-		============================================ -->
-    <script src="{{url('js/flot/jquery.flot.js')}}"></script>
-    <script src="{{url('js/flot/jquery.flot.resize.js')}}"></script>
-    <script src="{{url('js/flot/curvedLines.js')}}"></script>
-    <script src="{{url('js/flot/flot-active.js')}}"></script>
-    <!-- knob JS
-		============================================ -->
-    <script src="{{url('js/knob/jquery.knob.js')}}"></script>
-    <script src="{{url('js/knob/jquery.appear.js')}}"></script>
-    <script src="{{url('js/knob/knob-active.js')}}"></script>
-    <!--  wave JS
-		============================================ -->
-    <script src="{{url('js/wave/waves.min.js')}}"></script>
-    <script src="{{url('js/wave/wave-active.js')}}"></script>
-    <!--  todo JS
-		============================================ -->
-    <script src="{{url('js/todo/jquery.todo.js')}}"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="{{url('js/plugins.js')}}"></script>
-	<!--  Chat JS
-		============================================ -->
-    <script src="{{url('js/chat/moment.min.js')}}"></script>
-    <script src="{{url('js/chat/jquery.chat.js')}}"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="{{url('js/main.js')}}"></script>
-	<!-- tawk chat JS
-		============================================ -->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{{url('admin/js/off-canvas.js')}}"></script>
+  <script src="{{url('admin/js/hoverable-collapse.js')}}"></script>
+  <script src="{{url('admin/js/template.js')}}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{{url('admin/js/dashboard.js')}}"></script>
 
+
+  <!-- End custom js for this page-->
 </body>
 
 </html>

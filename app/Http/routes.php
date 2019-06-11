@@ -21,7 +21,11 @@ Route::get('invoice','InvoiceController@index');
 Route::POST('addPost','ManageAdminController@addPost');
 Route::POST('editPost','ManageAdminController@editPost');
 Route::POST('deletePost','ManageAdminController@deletePost');
-
+Route::get('manageadmin','ManageAdminController@index');
 Route::get('admin', function () {
     return view('partial.admin');
+});
+
+Route::get('tes', function () {
+    return view('tes');
 });
