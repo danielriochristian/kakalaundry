@@ -1,6 +1,6 @@
 @extends('layout')
 @section('order')
-<p class="card-title">Recent Purchases</p>
+<p class="card-title">Create Order</p>
 
       <form action="/postorder" method="post" id="myForm" enctype="multipart/form-data" target="_blank" class="form-horizontal">
         {{ csrf_field() }}
@@ -46,21 +46,20 @@
             </div>
           </div>
         </div>
+
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="floating-numner">
-              <p>Berat</p>
+              <p>Berat Pakaian</p>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="form-group">
             <div class="nk-int-st">
-              <input type="text" name="berat" class="form-control" placeholder="2" required>
+                <input type="text" name="berat" class="form-control" placeholder="2" required>
             </div>
           </div>
         </div>
-        <div class="row">
+      </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="floating-numner">
               <p>Jenis Pelayanan</p>
@@ -75,13 +74,11 @@
             </div>
           </div>
         </div>
-
       </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="floating-numner">
               <p>Paket</p>
             </div>
-
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="form-group">
             <div class="nk-int-st">
@@ -118,7 +115,8 @@
             <div class="floating-numner">
               <p>Jenis Pakaian</p>
             </div>
-
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="form-group">
             <div class="nk-int-st">
                 <select name="pakaian" id="pakaian" class="form-control">
                 <option value="Baju">Baju</option>
@@ -129,6 +127,8 @@
               </select>
             </div>
           </div>
+        </div>
+        </div>
         </div>
 
           <button type="submit" class="btn btn-primary btn-sm">

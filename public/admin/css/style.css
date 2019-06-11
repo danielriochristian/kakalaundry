@@ -20,7 +20,7 @@
     + Color Functions Mixins
     + Badge Mixins
     + Blockquote Mixins
-    
+
   * Core Styles
     + Reset Styles
     + Fonts
@@ -43,7 +43,7 @@
     + Lists
     + Tables
   * Plugin overrides
-    + Data-tables  
+    + Data-tables
   * Landing screens
     + Auth
   * Layout
@@ -11414,9 +11414,9 @@ input[type="button"].btn-block {
   }
 }
 
-.fade:not(.show) {
+/* .fade:not(.show) {
   opacity: 0;
-}
+} */
 
 .collapse:not(.show) {
   display: none;

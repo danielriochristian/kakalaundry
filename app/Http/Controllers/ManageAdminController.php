@@ -11,6 +11,10 @@ use Yajra\Datatables\Facades\Datatables;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use App\User;
+use App\Cuci;
+use Maatwebsite\Excel\Facades\Excel;
+
+
 class ManageAdminController extends Controller
 {
 
@@ -24,7 +28,7 @@ class ManageAdminController extends Controller
         return view('partial.admin');
     }
 
-    public function addPost(Request $request){
+    public function tambah(){
     $rules = array(
       'name' => 'required',
       'email' => 'required',
@@ -47,7 +51,7 @@ class ManageAdminController extends Controller
     $manage = Admin::find ($request->id);
     $manage->name = $request->name;
     $manage->email = $request->email;
-    
+
     // $manage->password = bcrypt($request['password']);
     $manage->save();
     return response()->json($manage);
@@ -70,5 +74,34 @@ class ManageAdminController extends Controller
 
               ->make(true);
     }
+
+    public function export()
+    {
+      $cuci = DB::table('cuci')->get();
+      $cuci_array[] = array('No Transaksi','Nama Customer','No Handphone','Alamat','Berat Pakaian','Jenis Pelayanan','Paket','Jenis Cucian','Jenis Pengharum','Total Harga','Tanggal Order','Tanggal Selesai');
+      foreach($cuci as $c){
+        $cuci_array[]=array(
+          'No Transaksi' => $c->no_transaksi,
+          'Nama Customer' => $c->nama_customer,
+          'No Handphone' => $c->no_telp,
+          'Alamat' => $c->alamat,
+          'Berat Pakaian' => $c->berat_pakaian,
+          'Jenis Pelayanan' => $c->jenis_cucian,
+          'Paket' => $c->paket,
+          'Jenis Cucian' => $c->jenis_cucian,
+          'Jenis Pengharum' => $c->jenis_pengharum,
+          'Total Harga' => $c->harga,
+          'Tanggal Order' => $c->tgl_terima,
+          'Tanggal Selesai'  => $c->tgl_selesai
+        );
+      }
+      Excel::create('Invoice', function($excel) use ($cuci_array){
+      $excel->setTitle('Invoice');
+      $excel->sheet('Invoice', function($sheet) use ($cuci_array){
+       $sheet->fromArray($cuci_array, null, 'A1', false, false);
+      });
+     })->download('xlsx');
+    }
+
 
 }

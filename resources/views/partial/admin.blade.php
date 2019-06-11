@@ -1,6 +1,6 @@
 @extends('layout')
 @section('admin')
-<p class="card-title">Recent Purchases</p>
+<p class="card-title">Manage Admin</p>
 <div class="table-responsive">
 
   <div class="row">
@@ -22,34 +22,34 @@
     </thead>
   </table>
 </div>
-<div id="create" class="modal fade" role="dialog">
+<div id="create" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"></h4>
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
         <form class="form-horizontal" role="form">
-          <div class="form-group row add">
+          <div class="form-group">
             <label class="control-label col-sm-2" for="name">Name</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="name" name="name" placeholder="Daniel Rio Christian" required>
-              <p class="error text-center alert alert-danger hidden"></p>
+              <!-- <p class="error text-center alert alert-danger hidden"></p> -->
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="email">E-Mail</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="email" name="email" placeholder="webmaster@gmail.com" required>
-              <p class="error text-center alert alert-danger hidden"></p>
+              <!-- <p class="error text-center alert alert-danger hidden"></p> -->
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="password">Password</label>
+            <label class="control-label col-sm-3" for="password">Password</label>
             <div class="col-sm-10">
               <input type="password" class="form-control" id="password" name="password" placeholder="Your Password Here" required>
-              <p class="error text-center alert alert-danger hidden"></p>
+              <!-- <p class="error text-center alert alert-danger hidden"></p> -->
             </div>
           </div>
           <div class="form-group">
@@ -71,8 +71,8 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"></h4>
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
         <form class="form-horizontal" role="modal">

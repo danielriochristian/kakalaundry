@@ -22,6 +22,9 @@ Route::POST('addPost','ManageAdminController@addPost');
 Route::POST('editPost','ManageAdminController@editPost');
 Route::POST('deletePost','ManageAdminController@deletePost');
 Route::get('manageadmin','ManageAdminController@index');
+Route::get('export','ManageAdminController@export');
+Route::get('tambah','ManageAdminController@tambah');
+Route::get('logout','LoginController@logout');
 Route::get('admin', function () {
     return view('partial.admin');
 });

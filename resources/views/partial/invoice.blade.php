@@ -1,6 +1,6 @@
 @extends('layout')
 @section('invoice')
-<p class="card-title">Recent Purchases</p>
+<p class="card-title">List Invoice</p>
 <div class="table-responsive">
   <table id="contoh" class="table table-striped table-bordered responsive datatable" style="width:100%">
     <thead>

@@ -27,4 +27,8 @@ class LoginController extends Controller
       return Redirect::back()->withErrors(['Password atau email anda salah!']);
     }
   }
+  public function logout(Request $request) {
+  Auth::logout();
+  return redirect('/');
+}
 }
