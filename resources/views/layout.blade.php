@@ -53,10 +53,7 @@
               <span class="nav-profile-name">{{Auth::User()->name}}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="mdi mdi-settings text-primary"></i>
-                Settings
-              </a>
+
               <a href="logout" class="dropdown-item">
                 <i class="mdi mdi-logout text-primary"></i>
                 Logout
@@ -146,14 +143,14 @@
                       <div class="d-flex flex-wrap justify-content-xl-between">
 
                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                          <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
+                            <i class="mdi mdi-download mr-3 icon-lg text-primary"></i>
                           <div class="d-flex flex-column justify-content-around">
                             <small class="mb-1 text-muted">Paket Reguler</small>
                             <h5 class="mr-2 mb-0">{{DB::table('cuci')->where('paket','=','Reguler')->count()}}</h5>
                           </div>
                         </div>
                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                          <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                          <i class="mdi mdi-download mr-3 icon-lg text-success"></i>
                           <div class="d-flex flex-column justify-content-around">
                             <small class="mb-1 text-muted">Paket Kilat</small>
                             <h5 class="mr-2 mb-0">{{DB::table('cuci')->where('paket','=','Kilat')->count()}}</h5>
@@ -167,7 +164,7 @@
                           </div>
                         </div>
                         <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                          <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
+                        <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
                           <div class="d-flex flex-column justify-content-around">
                             <small class="mb-1 text-muted">Transaksi</small>
                             <h5 class="mr-2 mb-0">{{DB::table('cuci')->count()}}</h5>
@@ -200,8 +197,8 @@
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 Makasih Mas</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Dibuat dengan keterbatasan waktu & niat <i class="mdi mdi-heart text-danger"></i></span>
           </div>
         </footer>
         <!-- partial -->
